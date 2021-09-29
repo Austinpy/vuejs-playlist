@@ -23,7 +23,8 @@
 <!-- -->
 <!--                               Learn Input Binding -->
 <!-- -->
-    <add-blog></add-blog>
+<!--    <add-blog></add-blog>-->
+    <show-blogs></show-blogs>
   </div>
 </template>
 
@@ -33,6 +34,7 @@ import Trucks from './components/Trucks.vue';
 import Footer from './components/Footer.vue';
 import formHelper from './components/formHelper.vue';
 import addBlog from './components/addBlog.vue';
+import showBlogs from './components/showBlogs.vue';
 
 export default {
   components: {
@@ -41,6 +43,7 @@ export default {
     'app-footer': Footer,
     'form-helper': formHelper,
     'add-blog': addBlog,
+    'show-blogs': showBlogs
   },
   data () {
     return {
