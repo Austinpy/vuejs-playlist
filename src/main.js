@@ -2,16 +2,10 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 import App from './App.vue'
 
+// HTTP get/post
 Vue.use(VueResource);
 
-// Custom directives
-Vue.directive('rainbow', {
-  // bind is like a life-cycle hook that executes when the v-rainbow is called
-  // el is the element, binding is the v-rainbow="this stuff here", vnode not important rn
-  bind(el, binding, vnode){
-    el.style.color = "#" + Math.random().toString().slice(2,8);
-  }
-})
+// Global directives
 Vue.directive('theme', {
   bind(el, binding, vnode){
     if(binding.value === 'wide'){
@@ -26,17 +20,10 @@ Vue.directive('theme', {
   }
 })
 
-// Filters
-Vue.filter('to-uppercase', function(value){
-  return value.toUpperCase();
-})
-Vue.filter('snippet', function (value){
-  // display only 100 chars
-  return value.slice(0,100) + '...';
-})
-
+// Global Event Bus
 export const bus = new Vue();
 
+// Main Vue instance
 new Vue({
   el: '#app',
   render: h => h(App)
