@@ -26,6 +26,15 @@ Vue.directive('theme', {
   }
 })
 
+// Filters
+Vue.filter('to-uppercase', function(value){
+  return value.toUpperCase();
+})
+Vue.filter('snippet', function (value){
+  // display only 100 chars
+  return value.slice(0,100) + '...';
+})
+
 export const bus = new Vue();
 
 new Vue({
