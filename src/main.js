@@ -11,7 +11,8 @@ Vue.use(VueRouter);
 
 // Router instance
 const router = new VueRouter({
-  routes: Routes
+  routes: Routes,
+  mode: 'history'
 });
 
 // Global directives
