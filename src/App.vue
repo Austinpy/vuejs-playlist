@@ -24,7 +24,8 @@
 <!--                               Learn Input Binding -->
 <!-- -->
 <!--    <add-blog></add-blog>-->
-    <show-blogs></show-blogs>
+<!--    <show-blogs></show-blogs>-->
+    <router-view></router-view>
   </div>
 </template>
 

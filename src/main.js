@@ -1,9 +1,19 @@
-import Vue from 'vue'
-import VueResource from 'vue-resource'
-import App from './App.vue'
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+import App from './App.vue';
+import VueRouter from "vue-router";
+import Routes from "./routes";
 
 // HTTP get/post
 Vue.use(VueResource);
+// Routing
+Vue.use(VueRouter);
+
+
+const router = new VueRouter({
+  routes: Routes
+});
+
 
 // Global directives
 Vue.directive('theme', {
@@ -26,5 +36,6 @@ export const bus = new Vue();
 // Main Vue instance
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  router: router
 })
