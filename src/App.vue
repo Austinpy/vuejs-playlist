@@ -26,6 +26,7 @@
 <!--    <add-blog></add-blog>-->
 <!--    <show-blogs></show-blogs>-->
 <!--    <list-blogs></list-blogs>-->
+    <app-navigation></app-navigation>
     <router-view></router-view>
   </div>
 </template>
@@ -38,6 +39,7 @@ import formHelper from './components/formHelper.vue';
 import addBlog from './components/addBlog.vue';
 import showBlogs from './components/showBlogs.vue';
 import listBlogs from './components/listBlogs.vue';
+import navigation from './components/Navigation.vue';
 
 export default {
   components: {
@@ -47,7 +49,8 @@ export default {
     'form-helper': formHelper,
     'add-blog': addBlog,
     'show-blogs': showBlogs,
-    'list-blogs': listBlogs
+    'list-blogs': listBlogs,
+    'app-navigation': navigation
   },
   data () {
     return {
